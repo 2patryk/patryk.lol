@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  skipTrailingSlashRedirect: true,
   reactStrictMode: false,
   experimental: {
     typedRoutes: true,
