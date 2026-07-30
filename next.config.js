@@ -7,9 +7,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  async redirects() {
+    return [
+      { source: "/kaliska", destination: "/kaliska/", permanent: false },
+    ];
+  },
   async rewrites() {
     return [
-      { source: "/kaliska", destination: "http://srv71.mikr.us:40457" },
+      { source: "/kaliska/", destination: "http://srv71.mikr.us:40457" },
       { source: "/kaliska/:path*", destination: "http://srv71.mikr.us:40457/:path*" },
     ];
   },
